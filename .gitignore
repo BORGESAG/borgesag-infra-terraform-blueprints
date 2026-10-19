@@ -1,0 +1,33 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Real values never live here; examples use *.tfvars.example
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Secrets and keys
+*.pem
+*.key
+*.pfx
+.env
+.env.*
+
+# Tooling
+.venv/
+.tflint.d/
+logs/
+.DS_Store
+Thumbs.db

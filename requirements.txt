@@ -1,0 +1,5 @@
+# Tooling installed in .venv by make setup. Exact pins; bump deliberately and record it
+# in CHANGELOG.md (checked 2026-10-19). terraform, tflint, trivy and gitleaks are binaries
+# installed outside .venv; their pins are in docs/tooling.md.
+pre-commit==4.7.0
+checkov==3.3.29

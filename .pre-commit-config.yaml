@@ -1,0 +1,29 @@
+---
+# pre-commit install  (runs before every commit; make lint runs the same checks)
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        exclude: \.md$
+      - id: mixed-line-ending
+        args: [--fix=no]
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.109.2
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_validate
+        args: [--hook-config=--retry-once-with-cleanup=true]
+      - id: terraform_tflint
+        args: [--args=--config=__GIT_WORKING_DIR__/.tflint.hcl]
+      - id: terraform_checkov
+        args: [--args=--quiet --compact --external-checks-dir __GIT_WORKING_DIR__/policies/checkov]
+      - id: terraform_trivy
+        args: [--args=--severity HIGH,CRITICAL --skip-dirs="**/.terraform"]
