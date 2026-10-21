@@ -12,6 +12,8 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
+# Lock files are committed in examples only (ADR 0005)
+modules/**/.terraform.lock.hcl
 
 # Real values never live here; examples use *.tfvars.example
 *.tfvars

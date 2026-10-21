@@ -21,7 +21,8 @@ Modules here are thin wrappers that set secure defaults, naming and tags on top 
 
 Rules:
 
-- Pin each upstream module to an exact version (registry) or tag (git).
+- Pin each upstream module to an exact version (registry) or commit hash (git, tag named in
+  a comment); git tags can be moved (checkov `CKV_TF_1`). Amended 2026-10-21.
 - Write a resource directly only when no maintained upstream module covers it; say why in
   the module README.
 - Copied upstream code keeps its license header and is listed in `NOTICE.md`.

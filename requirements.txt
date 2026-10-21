@@ -3,3 +3,6 @@
 # installed outside .venv; their pins are in docs/tooling.md.
 pre-commit==4.7.0
 checkov==3.3.29
+# Pulled in by checkov (asteval). NumPy 2.5.4 fails on CPUs without x86-64-v2 (SSE4.2,
+# POPCNT); 2.3.5 was tested and keeps checkov running on older validation hosts.
+numpy==2.3.5
