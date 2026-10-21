@@ -32,8 +32,8 @@ run "private_by_default" {
   }
 
   assert {
-    condition     = local.subnets["app"].display_name == "example-lab-dev-app-subnet"
-    error_message = "The subnet name must follow <name>-<key>-subnet."
+    condition     = local.subnets["app"].display_name == "example-lab-dev-snet-app"
+    error_message = "The subnet name must follow <name>-snet-<key>."
   }
 
   assert {
@@ -57,7 +57,7 @@ run "private_by_default" {
   }
 
   assert {
-    condition     = local.tags["managed-by"] == "terraform" && local.tags["environment"] == "dev"
+    condition     = local.tags["managed-by"] == "terraform" && local.tags["iac-module"] == "oci/network" && local.tags["environment"] == "dev"
     error_message = "Tags must merge the input with managed-by=terraform."
   }
 

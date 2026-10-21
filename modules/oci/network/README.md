@@ -30,17 +30,18 @@ checks on security rules (`enable_cis_checks`).
 | Subnets | private (`prohibit_public_ip_on_vnic`, `prohibit_internet_ingress`) | B-05 |
 | Default security list | no ingress, no egress rules | open traffic per workload with NSGs |
 | Gateways | none | NAT and service gateways are not OCI Always Free |
-| Tags | `var.tags` plus `managed-by=terraform` | ADR 0004 |
+| Tags | `var.tags` plus `managed-by=terraform`, `iac-module=oci/network` | ADR 0004 |
 | CIS checks | on | upstream rejects 0.0.0.0/0 in the default security list |
 
-Names: `<name>-vcn`, `<name>-<key>-subnet`, `<name>-public-rt`, `<name>-private-rt`,
-`<name>-igw`, `<name>-natgw`, `<name>-sgw`, `<name>-default-sl`.
+Names (ADR 0004, `name` = prefix from `multi/naming`): `<name>-vcn`, `<name>-snet-<key>`,
+`<name>-rt-public`, `<name>-rt-private`, `<name>-igw`, `<name>-ngw`, `<name>-sgw`,
+`<name>-sl-default`.
 
 ## Inputs
 
 | Name | Type | Default | Description |
 |---|---|---|---|
-| `name` | string | required | base for resource names |
+| `name` | string | required | prefix from `multi/naming` (`<org>-<workload>-<env>-<region>`) |
 | `compartment_id` | string | required | compartment OCID |
 | `cidr_blocks` | list(string) | required | VCN IPv4 CIDRs |
 | `dns_label` | string | `null` | VCN DNS label; null disables DNS hostnames |

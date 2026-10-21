@@ -1,5 +1,5 @@
 locals {
-  tags = merge(var.tags, { "managed-by" = "terraform" })
+  tags = merge(var.tags, { "managed-by" = "terraform", "iac-module" = "oci/network" })
 
   public_route_rules = var.create_internet_gateway ? {
     internet = {
@@ -32,13 +32,13 @@ locals {
   route_tables = merge(
     var.create_internet_gateway ? {
       rt-public = {
-        display_name = "${var.name}-public-rt"
+        display_name = "${var.name}-rt-public"
         route_rules  = local.public_route_rules
       }
     } : {},
     {
       rt-private = {
-        display_name = "${var.name}-private-rt"
+        display_name = "${var.name}-rt-private"
         route_rules  = local.private_route_rules
       }
     }
@@ -47,7 +47,7 @@ locals {
   subnets = {
     for k, s in var.subnets : k => {
       cidr_block                 = s.cidr_block
-      display_name               = "${var.name}-${k}-subnet"
+      display_name               = "${var.name}-snet-${k}"
       dns_label                  = s.dns_label
       prohibit_internet_ingress  = !s.public
       prohibit_public_ip_on_vnic = !s.public
@@ -73,7 +73,7 @@ locals {
 
             # No rules: traffic is opened per workload with network security groups.
             default_security_list = {
-              display_name  = "${var.name}-default-sl"
+              display_name  = "${var.name}-sl-default"
               ingress_rules = []
               egress_rules  = []
             }
@@ -90,7 +90,7 @@ locals {
               } : {}
               nat_gateways = var.create_nat_gateway ? {
                 natgw = {
-                  display_name  = "${var.name}-natgw"
+                  display_name  = "${var.name}-ngw"
                   block_traffic = false
                 }
               } : {}
