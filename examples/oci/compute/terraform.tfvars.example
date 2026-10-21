@@ -1,0 +1,4 @@
+region              = "sa-saopaulo-1"
+compartment_id      = "ocid1.compartment.oc1..exampleuniqueid"
+image_id            = "ocid1.image.oc1.sa-saopaulo-1.exampleuniqueid"
+ssh_authorized_keys = "ssh-ed25519 AAAAexamplepublickey user@example"

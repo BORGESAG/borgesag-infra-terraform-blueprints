@@ -17,8 +17,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Module `oci/network` over OCI Landing Zones networking v0.9.0: one VCN, private-by-default
   subnets, locked default security list, optional internet, NAT and service gateways;
   mocked `terraform test`; example `examples/oci/network` with lock file.
+- Module `oci/compute` on provider resources (upstream forces a boot volume backup policy
+  beyond OCI Always Free): private VNIC, legacy IMDS off, in-transit encryption, optional
+  Oracle backup policy; mocked `terraform test`; example `examples/oci/compute`.
+- Module `multi/naming`: name prefix `<org>-<workload>-<env>-<region>`, OCI region keys,
+  type abbreviations and the standard tag set; examples use it.
 
 ### Changed
 
+- ADR 0004 revised: structured name prefix, type abbreviations, mandatory tags
+  `cost-center`, `data-classification`, `criticality` and module-set `iac-module`; module
+  suffixes follow it (`snet-<key>`, `rt-public`, `ngw`, `sl-default`, `vm-NN`).
 - ADR 0002: git upstream modules are pinned by commit hash, tag in a comment (`CKV_TF_1`).
 - `requirements.txt` pins `numpy==2.3.5` so checkov runs on CPUs without x86-64-v2.

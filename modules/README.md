@@ -16,3 +16,5 @@ Tag format: `<provider>-<module>/vX.Y.Z` (ADR 0004).
 | Module | Upstream | Level | Latest tag |
 |---|---|---|---|
 | [oci/network](oci/network) | oci-landing-zones/terraform-oci-modules-networking v0.9.0 | L1 | none |
+| [multi/naming](multi/naming) | none (no provider) | L1 | none |
+| [oci/compute](oci/compute) | none (provider resources; see README) | L1 | none |
