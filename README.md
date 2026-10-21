@@ -31,6 +31,9 @@ under `multi`. See [ADR 0001](docs/adr/0001-repository-structure.md).
 Every module and blueprint states its level in its README. See
 [ADR 0003](docs/adr/0003-validation-levels.md).
 
+Blueprints are also reviewed against CIS, NIST and the provider's well-architected
+framework; the baseline controls and the checklist are in [docs/frameworks.md](docs/frameworks.md).
+
 ## Usage
 
 ```bash
