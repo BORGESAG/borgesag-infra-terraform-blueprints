@@ -51,6 +51,8 @@ take this pattern documents its deviation.
 | load balancer | `lb` | vault | `kv` |
 | NAT gateway | `ngw` | VCN / VPC / VNet | `vcn` |
 | VNIC | `vnic` | volume attachment | `att` |
+| compartment | `cmp` | dynamic group | `dg` |
+| IAM policy | `pol` | | |
 
 New abbreviations are added to this table and to `modules/multi/naming` together.
 

@@ -20,3 +20,4 @@ Tag format: `<provider>-<module>/vX.Y.Z` (ADR 0004).
 | [oci/compute](oci/compute) | none (provider resources; see README) | L1 | none |
 | [oci/block-volume](oci/block-volume) | none (provider resources; see README) | L1 | none |
 | [oci/object-storage](oci/object-storage) | none (provider resources; see README) | L1 | none |
+| [oci/iam](oci/iam) | oci-landing-zones/terraform-oci-modules-iam v0.3.5 | L1 | none |

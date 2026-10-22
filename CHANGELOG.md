@@ -29,6 +29,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   `terraform test`.
 - Example `examples/oci/storage`: compute with an attached data volume and a bucket within
   OCI Always Free; abbreviation `att` (volume attachment) added to ADR 0004 and `multi/naming`.
+- Module `oci/iam` over OCI Landing Zones IAM v0.3.5 (compartments, dynamic groups,
+  policies): workload compartment kept on destroy by default, CIS IAM checks, optional Object
+  Storage service policy, `{compartment_id}` placeholder in statements; mocked
+  `terraform test`; example `examples/oci/iam`; abbreviations `cmp`, `dg`, `pol` added.
 
 ### Changed
 
