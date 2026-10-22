@@ -22,6 +22,13 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   Oracle backup policy; mocked `terraform test`; example `examples/oci/compute`.
 - Module `multi/naming`: name prefix `<org>-<workload>-<env>-<region>`, OCI region keys,
   type abbreviations and the standard tag set; examples use it.
+- Module `oci/block-volume` on provider resources: volume with optional paravirtualized
+  attachment encrypted in transit and optional Oracle backup policy; mocked `terraform test`.
+- Module `oci/object-storage` on provider resources: private bucket, versioning and object
+  events on, optional lifecycle rules for previous versions and multipart uploads; mocked
+  `terraform test`.
+- Example `examples/oci/storage`: compute with an attached data volume and a bucket within
+  OCI Always Free; abbreviation `att` (volume attachment) added to ADR 0004 and `multi/naming`.
 
 ### Changed
 

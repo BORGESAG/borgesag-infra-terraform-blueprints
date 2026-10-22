@@ -69,6 +69,7 @@ locals {
     vault                  = "kv"
     vcn                    = "vcn"
     vnic                   = "vnic"
+    volume_attachment      = "att"
   }
 
   standard_tags = {

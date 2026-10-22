@@ -50,7 +50,7 @@ take this pattern documents its deviation.
 | Kubernetes cluster | `k8s` | subnet | `snet` |
 | load balancer | `lb` | vault | `kv` |
 | NAT gateway | `ngw` | VCN / VPC / VNet | `vcn` |
-| VNIC | `vnic` | | |
+| VNIC | `vnic` | volume attachment | `att` |
 
 New abbreviations are added to this table and to `modules/multi/naming` together.
 
