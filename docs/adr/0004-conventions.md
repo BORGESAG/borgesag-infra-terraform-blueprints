@@ -52,7 +52,7 @@ take this pattern documents its deviation.
 | NAT gateway | `ngw` | VCN / VPC / VNet | `vcn` |
 | VNIC | `vnic` | volume attachment | `att` |
 | compartment | `cmp` | dynamic group | `dg` |
-| IAM policy | `pol` | | |
+| IAM policy | `pol` | tag namespace | `tns` |
 
 New abbreviations are added to this table and to `modules/multi/naming` together.
 

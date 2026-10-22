@@ -74,8 +74,8 @@ Map keys for `dynamic_groups` and `policies` are 1 to 15 lowercase letters or di
 - No groups, users or identity domains: tenancies with identity domains manage them in the
   domain; add an input when a blueprint needs it. Dynamic groups use the legacy IAM API,
   which OCI maps to the Default domain.
-- No defined-tag namespace or tag defaults (OCI Landing Zones governance module); a
-  separate module when tag-based policies or cost tracking by defined tags are needed.
+- No defined-tag namespace or tag defaults: use [oci/defined-tags](../defined-tags) and its
+  `defined_tag_keys` output in tag-based policy statements.
 - Policy statements are checked only for the CIS rules above; review least privilege per
   workload (B-01).
 - On Windows, `terraform init` needs git long paths for the upstream clone

@@ -69,6 +69,7 @@ locals {
     security_list          = "sl"
     service_gateway        = "sgw"
     subnet                 = "snet"
+    tag_namespace          = "tns"
     vault                  = "kv"
     vcn                    = "vcn"
     vnic                   = "vnic"

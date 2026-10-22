@@ -33,6 +33,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   policies): workload compartment kept on destroy by default, CIS IAM checks, optional Object
   Storage service policy, `{compartment_id}` placeholder in statements; mocked
   `terraform test`; example `examples/oci/iam`; abbreviations `cmp`, `dg`, `pol` added.
+- Module `oci/defined-tags` over OCI Landing Zones governance v0.1.6 (tags): one namespace
+  with keys, value lists, cost tracking and tag defaults, optional CIS `CreatedBy` /
+  `CreatedOn`; plan-time checks for reserved names, value lists, 10 cost-tracking keys and
+  required defaults at the root; documented retire-then-destroy path; mocked
+  `terraform test`; example `examples/oci/defined-tags`; abbreviation `tns` added.
 
 ### Changed
 
