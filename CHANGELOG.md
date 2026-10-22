@@ -38,6 +38,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   `CreatedOn`; plan-time checks for reserved names, value lists, 10 cost-tracking keys and
   required defaults at the root; documented retire-then-destroy path; mocked
   `terraform test`; example `examples/oci/defined-tags`; abbreviation `tns` added.
+- Module `oci/budget` on provider resources (upstream allows one alert rule per budget and
+  derives the start day from `timestamp()`): budget on the tenancy, a compartment or a
+  cost-tracking tag, monthly from a fixed day or one-time, several email alert rules on
+  actual or forecast spend; mocked `terraform test`; example `examples/oci/budget`
+  (free-tier guard); abbreviation `bdg` added.
 
 ### Changed
 

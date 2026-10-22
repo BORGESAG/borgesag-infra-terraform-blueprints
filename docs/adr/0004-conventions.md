@@ -53,6 +53,7 @@ take this pattern documents its deviation.
 | VNIC | `vnic` | volume attachment | `att` |
 | compartment | `cmp` | dynamic group | `dg` |
 | IAM policy | `pol` | tag namespace | `tns` |
+| budget | `bdg` | | |
 
 New abbreviations are added to this table and to `modules/multi/naming` together.
 

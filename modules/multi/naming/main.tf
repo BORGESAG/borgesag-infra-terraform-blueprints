@@ -55,6 +55,7 @@ locals {
   # Resource type abbreviations shared by every module (ADR 0004).
   abbreviations = {
     block_volume           = "bv"
+    budget                 = "bdg"
     bucket                 = "bkt"
     compartment            = "cmp"
     dynamic_group          = "dg"
