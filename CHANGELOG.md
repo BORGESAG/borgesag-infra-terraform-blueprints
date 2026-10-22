@@ -43,6 +43,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   cost-tracking tag, monthly from a fixed day or one-time, several email alert rules on
   actual or forecast spend; mocked `terraform test`; example `examples/oci/budget`
   (free-tier guard); abbreviation `bdg` added.
+- Module `oci/vault` on provider resources (upstream needs explicit provider passing from
+  every caller and names compartments in grant statements): shared-partition vault or an
+  existing one, HSM AES-256 keys by default, manual rotation by key versions, per-key grant
+  policies for services, groups and dynamic groups, check against the 20 Always Free HSM key
+  versions; mocked `terraform test`; example `examples/oci/vault`; abbreviation `key` added;
+  storage READMEs point their `kms_key_id` input to it.
 
 ### Changed
 

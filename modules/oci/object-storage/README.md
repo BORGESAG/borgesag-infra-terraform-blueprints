@@ -59,7 +59,7 @@ Without it, creating the lifecycle policy fails at apply. The policy is not crea
 | `auto_tiering` | string | `Disabled` | or `InfrequentAccess` (Standard only) |
 | `versioning` | string | `Enabled` | `Enabled`, `Suspended`, `Disabled` |
 | `object_events_enabled` | bool | `true` | emit object events |
-| `kms_key_id` | string | `null` | Vault key |
+| `kms_key_id` | string | `null` | Vault key, for example from `oci/vault` (`key_ids`; grant `objectstorage-<region>`) |
 | `previous_version_retention_days` | number | `null` | delete previous versions after N days |
 | `multipart_upload_abort_days` | number | `null` | abort unfinished uploads after N days |
 | `tags` | map(string) | `{}` | freeform tags |

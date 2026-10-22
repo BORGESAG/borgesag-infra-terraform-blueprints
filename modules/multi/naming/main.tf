@@ -60,6 +60,7 @@ locals {
     compartment            = "cmp"
     dynamic_group          = "dg"
     internet_gateway       = "igw"
+    key                    = "key"
     instance               = "vm"
     kubernetes_cluster     = "k8s"
     load_balancer          = "lb"

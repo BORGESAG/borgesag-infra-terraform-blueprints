@@ -55,7 +55,7 @@ volume storage in total and 5 volume backups in total, home region only.
 | `availability_domain` | number | `1` | AD number (1 to 3); same as the instance |
 | `size_in_gbs` | number | `50` | 50 to 32768 |
 | `vpus_per_gb` | number | `10` | multiple of 10, 0 to 120 |
-| `kms_key_id` | string | `null` | Vault key |
+| `kms_key_id` | string | `null` | Vault key, for example from `oci/vault` (`key_ids`; grant `blockstorage`) |
 | `backup_policy` | string | `null` | `bronze`, `silver`, `gold` or null |
 | `instance_id` | string | `null` | instance OCID to attach to |
 | `attachment_type` | string | `paravirtualized` | or `iscsi` |
